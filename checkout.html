@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B7Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Poppins', 'sans-serif'] },
+                    colors: { brand: '#1D4FFE' },
+                }
+            }
+        }
+    </script>
+    <style>
+        html { font-size: 62.5%; }
+        body { font-size: 1.6rem; }
+    </style>
+</head>
+
+<body class="bg-[#F9F9F9] font-sans">
+
+    <!-- Header Warning -->
+    <section class="bg-black text-white py-4 text-center text-[1.4rem]">
+        <div class="md:hidden"><span class="font-bold">FRETE GRÁTIS</span> para todo o Nordeste!</div>
+        <div class="hidden md:block"><span class="font-bold">FRETE GRÁTIS</span> para todo o Nordeste nas compras acima de R$ 199,00. <span class="font-bold">APROVEITA!</span></div>
+    </section>
+
+    <!-- Header -->
+    <header class="bg-white">
+        <div class="max-w-[1024px] mx-auto px-6 py-[33px] flex justify-between items-center">
+            <div class="flex items-center">
+                <a class="mr-10" href="">
+                    <img src="assets/images/ui/logo-black.png" alt="B7Store" />
+                </a>
+                <ul class="hidden lg:flex items-center gap-10">
+                    <li><a href="produtos.html" class="no-underline text-[#7F7F7F] hover:text-black">Camisetas</a></li>
+                    <li><a href="produtos.html" class="no-underline text-[#7F7F7F] hover:text-black">Kits B7Web</a></li>
+                    <li><a href="produtos.html" class="no-underline text-[#7F7F7F] hover:text-black">Acessórios</a></li>
+                    <li><a href="produtos.html" class="no-underline text-[#7F7F7F] hover:text-black">Eletrônicos</a></li>
+                </ul>
+            </div>
+            <div class="flex items-center gap-4">
+                <input class="hidden lg:block w-40 h-12 border border-[#D9D9D9] rounded px-4 text-[1.6rem] outline-none" type="text" placeholder="Pesquisa" />
+                <a href="login.html" class="w-12 h-12 border border-[#D9D9D9] rounded flex justify-center items-center hover:bg-black/5">
+                    <img class="w-6 h-6" src="assets/images/ui/user-line.png" alt="" />
+                </a>
+                <a href="checkout.html" class="w-12 h-12 border border-[#D9D9D9] rounded flex justify-center items-center hover:bg-black/5">
+                    <img class="w-6 h-6" src="assets/images/ui/shopping-bag-4-line.png" alt="" />
+                </a>
+                <a class="lg:hidden w-12 h-12 border border-[#D9D9D9] rounded flex justify-center items-center cursor-pointer hover:bg-black/5" href="#">
+                    <img class="w-6 h-6" src="assets/images/ui/menu-line.png" alt="" />
+                </a>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="hidden lg:hidden pb-8">
+            <a href="produtos.html" class="block no-underline text-[#7F7F7F] text-[1.9rem] px-8 py-6 border-b border-[#D9D9D9]">Camisetas</a>
+            <a href="produtos.html" class="block no-underline text-[#7F7F7F] text-[1.9rem] px-8 py-6 border-b border-[#D9D9D9]">Kits B7Web</a>
+            <a href="produtos.html" class="block no-underline text-[#7F7F7F] text-[1.9rem] px-8 py-6 border-b border-[#D9D9D9]">Acessórios</a>
+            <a href="produtos.html" class="block no-underline text-[#7F7F7F] text-[1.9rem] px-8 py-6 border-b border-[#D9D9D9]">Eletrônicos</a>
+        </div>
+        <!-- Mobile Search -->
+        <div class="lg:hidden px-6 pb-6">
+            <input class="w-full border border-[#D9D9D9] rounded px-4 py-[21px] text-[1.6rem] text-[#7F7F7F] outline-none" type="text" placeholder="O que você procura?" />
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main class="max-w-[1024px] mx-auto py-8">
+
+        <!-- Checkout Header -->
+        <section class="mx-6 flex items-center gap-[9px] text-[1.6rem] text-black">
+            <img src="assets/images/ui/shopping-bag-4-line.png" alt="" />
+            <div>Sua sacola de compras <span class="text-[#7F7F7F]">( 4 itens )</span></div>
+        </section>
+
+        <!-- Checkout -->
+        <section class="flex flex-col lg:flex-row mt-10 gap-8">
+
+            <!-- Products List -->
+            <div class="flex-1">
+                <div class="bg-white border-t border-b lg:border lg:border-[#D9D9D9] border-[#D9D9D9]">
+
+                    <!-- Desktop Header -->
+                    <div class="hidden lg:flex justify-between px-8 py-6 border-b border-[#D9D9D9] text-[1.6rem]">
+                        <div>Produto</div>
+                        <div>Preço</div>
+                    </div>
+
+                    <!-- Product Row (repeated 5x) -->
+                    <div class="flex gap-4 p-6 border-b border-[#D9D9D9]">
+                        <div class="w-24 h-24 border border-[#D9D9D9] p-[15px] flex justify-center items-center shrink-0">
+                            <img class="w-full" src="assets/images/products/bone-b7-azul.png" alt="" />
+                        </div>
+                        <div class="flex-1">
+                            <div class="text-[1.4rem] text-black">Boné B7Web - Preto</div>
+                            <div class="flex mt-[14px]">
+                                <div class="w-12 h-12 border border-[#D9D9D9] rounded flex justify-center items-center cursor-pointer hover:bg-black/5">-</div>
+                                <div class="border-t border-b border-[#D9D9D9] flex justify-center items-center text-[1.8rem] text-[#7F7F7F] w-12">01</div>
+                                <div class="w-12 h-12 border border-[#D9D9D9] rounded flex justify-center items-center cursor-pointer hover:bg-black/5">+</div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-end">
+                            <div class="text-[1.8rem] text-[#1D4FFE] mb-[21px]">R$ 49,99</div>
+                            <div class="w-12 h-12 border border-[#D9D9D9] rounded flex justify-center items-center cursor-pointer hover:bg-black/5">
+                                <img class="w-6 h-6" src="assets/images/ui/trash.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4 p-6 border-b border-[#D9D9D9]">
+                        <div class="w-24 h-24 border border-[#D9D9D9] p-[15px] flex justify-center items-center shrink-0">
+                            <img class="w-full" src="assets/images/products/bone-b7-azul.png" alt="" />
+                        </div>
+                        <div class="flex-1">
+                            <div class="text-[1.4rem] text-black">Boné B7Web - Preto</div>
+                            <div class="flex mt-[14px]">
+                                <div class="w-12 h-12 border border-[#D9D9D9] rounded flex justify-center items-center cursor-pointer hover:bg-black/5">-</div>
+                                <div class="border-t border-b border-[#D9D9D9] flex justify-center items-center text-[1.8rem] text-[#7F7F7F] w-12">01</div>
+                                <div class="w-12 h-12 border border-[#D9D9D9] rounded flex justify-center items-center cursor-pointer hover:bg-black/5">+</div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-end">
+                            <div class="text-[1.8rem] text-[#1D4FFE] mb-[21px]">R$ 49,99</div>
+                            <div class="w-12 h-12 border border-[#D9D9D9] rounded flex justify-center items-center cursor-pointer hover:bg-black/5">
+                                <img class="w-6 h-6" src="assets/images/ui/trash.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4 p-6 border-b border-[#D9D9D9]">
+                        <div class="w-24 h-24 border border-[#D9D9D9] p-[15px] flex justify-center items-center shrink-0">
+                            <img class="w-full" src="assets/images/products/bone-b7-azul.png" alt="" />
+                        </div>
+                        <div class="flex-1">
+                            <div class="text-[1.4rem] text-black">Boné B7Web - Preto</div>
+                            <div class="flex mt-[14px]">
+                                <div class="w-12 h-12 border border-[#D9D9D9] rounded flex justify-center items-center cursor-pointer hover:bg-black/5">-</div>
+                                <div class="border-t border-b border-[#D9D9D9] flex justify-center items-center text-[1.8rem] text-[#7F7F7F] w-12">01</div>
+                                <div class="w-12 h-12 border border-[#D9D9D9] rounded flex justify-center items-center cursor-pointer hover:bg-black/5">+</div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-end">
+                            <div class="text-[1.8rem] text-[#1D4FFE] mb-[21px]">R$ 49,99</div>
+                            <div class="w-12 h-12 border border-[#D9D9D9] rounded flex justify-center items-center cursor-pointer hover:bg-black/5">
+                                <img class="w-6 h-6" src="assets/images/ui/trash.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4 p-6 border-b border-[#D9D9D9]">
+                        <div class="w-24 h-24 border border-[#D9D9D9] p-[15px] flex justify-center items-center shrink-0">
+                            <img class="w-full" src="assets/images/products/bone-b7-azul.png" alt="" />
+                        </div>
+                        <div class="flex-1">
+                            <div class="text-[1.4rem] text-black">Boné B7Web - Preto</div>
+                            <div class="flex mt-[14px]">
+                                <div class="w-12 h-12 border border-[#D9D9D9] rounded flex justify-center items-center cursor-pointer hover:bg-black/5">-</div>
+                                <div class="border-t border-b border-[#D9D9D9] flex justify-center items-center text-[1.8rem] text-[#7F7F7F] w-12">01</div>
+                                <div class="w-12 h-12 border border-[#D9D9D9] rounded flex justify-center items-center cursor-pointer hover:bg-black/5">+</div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-end">
+                            <div class="text-[1.8rem] text-[#1D4FFE] mb-[21px]">R$ 49,99</div>
+                            <div class="w-12 h-12 border border-[#D9D9D9] rounded flex justify-center items-center cursor-pointer hover:bg-black/5">
+                                <img class="w-6 h-6" src="assets/images/ui/trash.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4 p-6 border-b border-[#D9D9D9]">
+                        <div class="w-24 h-24 border border-[#D9D9D9] p-[15px] flex justify-center items-center shrink-0">
+                            <img class="w-full" src="assets/images/products/bone-b7-azul.png" alt="" />
+                        </div>
+                        <div class="flex-1">
+                            <div class="text-[1.4rem] text-black">Boné B7Web - Preto</div>
+                            <div class="flex mt-[14px]">
+                                <div class="w-12 h-12 border border-[#D9D9D9] rounded flex justify-center items-center cursor-pointer hover:bg-black/5">-</div>
+                                <div class="border-t border-b border-[#D9D9D9] flex justify-center items-center text-[1.8rem] text-[#7F7F7F] w-12">01</div>
+                                <div class="w-12 h-12 border border-[#D9D9D9] rounded flex justify-center items-center cursor-pointer hover:bg-black/5">+</div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-end">
+                            <div class="text-[1.8rem] text-[#1D4FFE] mb-[21px]">R$ 49,99</div>
+                            <div class="w-12 h-12 border border-[#D9D9D9] rounded flex justify-center items-center cursor-pointer hover:bg-black/5">
+                                <img class="w-6 h-6" src="assets/images/ui/trash.png" alt="" />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Sidebar Info -->
+            <div class="mx-6 lg:mx-0 lg:w-[384px]">
+
+                <!-- Shipping Calculator -->
+                <div class="text-[1.6rem] text-[#7F7F7F]">
+                    <div>Calcular frete e prazo</div>
+                    <div class="flex gap-4 mt-[19px]">
+                        <input class="flex-1 border border-[#D9D9D9] rounded text-[1.6rem] text-[#7F7F7F] outline-none px-6 py-[21px]" type="text" placeholder="Digite o CEP" />
+                        <button class="bg-[#1D4FFE] text-white text-[1.8rem] border-0 rounded px-8 py-[18px] cursor-pointer">Calcular</button>
+                    </div>
+                </div>
+
+                <!-- Shipping Result -->
+                <div class="bg-white border border-[#D9D9D9] rounded-lg p-6 mt-4">
+                    <div class="text-[1rem] text-[#7F7F7F]">Rua das Flores - Jardins da Serra - Campos</div>
+                    <div class="flex justify-between items-center mt-3">
+                        <div class="text-[1.6rem] text-black">Receba em até 7 dias úteis</div>
+                        <div class="text-[1.6rem] text-[#6AB70A] font-bold">R$73,23</div>
+                    </div>
+                </div>
+
+                <!-- Subtotal -->
+                <div class="bg-white border border-[#D9D9D9] rounded-lg p-6 mt-4">
+                    <div class="flex justify-between mb-[19px] text-[1.6rem]">
+                        <div>Subtotal</div>
+                        <div>R$ 158,99</div>
+                    </div>
+                    <div class="flex justify-between pb-[19px] mb-[19px] border-b border-[#D9D9D9] text-[1.6rem]">
+                        <div>Frete</div>
+                        <div>--</div>
+                    </div>
+                    <div class="flex justify-between mb-[21px] text-[1.6rem]">
+                        <div>Total</div>
+                        <div class="text-[2.4rem] text-[#1D4FFE]">R$ 158,99</div>
+                    </div>
+                    <div class="text-[1.2rem] text-[#7F7F7F] text-right mb-[21px]">Forma de pagamento via PIX</div>
+                    <button class="w-full bg-[#1D4FFE] text-white text-[1.8rem] border-0 rounded py-[18px] cursor-pointer text-center">Continuar</button>
+                    <a class="text-[1.2rem] text-[#7F7F7F] no-underline block text-center mt-6" href="produtos.html">Comprar outros produtos</a>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Newsletter -->
+    <section class="bg-white border-t border-[#D9D9D9]">
+        <div class="max-w-[1024px] mx-auto px-6 py-[56px] flex flex-col lg:flex-row items-center gap-8">
+            <div class="w-[220px] lg:w-auto mx-auto lg:mx-0 text-center lg:text-left lg:flex lg:items-center">
+                <img class="w-[68px] h-[68px] mx-auto lg:mx-0 lg:mr-[29px]" src="assets/images/ui/mail-send-line.png" alt="" />
+                <div>
+                    <h3 class="text-[2.4rem] font-normal text-black my-6 lg:my-0 lg:mb-1">Fique por dentro das promoções!</h3>
+                    <p class="text-[#7F7F7F]">Coloque seu e-mail e seja o primeiro a saber</p>
+                </div>
+            </div>
+            <div class="w-full flex-1 flex flex-col lg:flex-row gap-6">
+                <input class="flex-1 border border-[#D9D9D9] rounded text-[1.6rem] text-[#7F7F7F] outline-none px-6 py-[21px]" type="text" placeholder="Qual seu e-mail?" />
+                <button class="bg-[#1D4FFE] text-white text-[1.8rem] border-0 rounded px-8 py-[18px] cursor-pointer">Enviar</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white">
+        <!-- Menu -->
+        <div class="max-w-[1024px] mx-auto py-[128px] lg:py-[63px] flex flex-col lg:flex-row items-center justify-between text-center lg:text-left">
+            <a href="">
+                <img src="assets/images/ui/logo-white.png" alt="B7Store" />
+            </a>
+            <ul class="mt-[88px] lg:mt-0 flex flex-col lg:flex-row gap-14 lg:gap-10">
+                <li><a href="produtos.html" class="no-underline text-white text-[2rem]">Camisetas</a></li>
+                <li><a href="produtos.html" class="no-underline text-white text-[2rem]">Kits B7Web</a></li>
+                <li><a href="produtos.html" class="no-underline text-white text-[2rem]">Acessórios</a></li>
+                <li><a href="produtos.html" class="no-underline text-white text-[2rem]">Eletrônicos</a></li>
+            </ul>
+        </div>
+        <!-- Contacts -->
+        <div class="max-w-[1024px] mx-auto py-12 flex flex-col lg:flex-row border-t border-white/25 border-b border-white/25">
+            <div class="flex-1">
+                <div class="text-center text-[2rem] mb-8 lg:text-left">Precisa de ajuda?</div>
+                <div class="flex flex-col lg:flex-row gap-8 px-8 lg:px-0 mb-[72px] lg:mb-0">
+                    <a class="h-20 border border-[#D9D9D9] rounded flex justify-center items-center no-underline text-white text-[2rem] px-8" href="">
+                        <img class="w-8 h-8 mr-4" src="assets/images/ui/mail-line.png" alt="" />
+                        <span>b7store@email.com</span>
+                    </a>
+                    <a class="h-20 border border-[#D9D9D9] rounded flex justify-center items-center no-underline text-white text-[2rem] px-8" href="">
+                        <img class="w-8 h-8 mr-4" src="assets/images/ui/phone-line.png" alt="" />
+                        <span>(00) 00000-0000</span>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <div class="text-center text-[2rem] mb-8">Acompanhe nas redes sociais</div>
+                <div class="flex justify-center gap-[21px]">
+                    <a href="" class="w-12 h-12 border border-[#D9D9D9] rounded flex justify-center items-center hover:bg-white/10">
+                        <img class="w-6 h-6" src="assets/images/ui/instagram-line.png" alt="" />
+                    </a>
+                    <a href="" class="w-12 h-12 border border-[#D9D9D9] rounded flex justify-center items-center hover:bg-white/10">
+                        <img class="w-6 h-6" src="assets/images/ui/linkedin-line.png" alt="" />
+                    </a>
+                    <a href="" class="w-12 h-12 border border-[#D9D9D9] rounded flex justify-center items-center hover:bg-white/10">
+                        <img class="w-6 h-6" src="assets/images/ui/facebook-line.png" alt="" />
+                    </a>
+                    <a href="" class="w-12 h-12 border border-[#D9D9D9] rounded flex justify-center items-center hover:bg-white/10">
+                        <img class="w-6 h-6" src="assets/images/ui/twitter-x-fill.png" alt="" />
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Bottom -->
+        <div class="max-w-[1024px] mx-auto py-12 flex flex-col lg:flex-row items-center gap-[72px] lg:justify-between">
+            <div>Se você leu isso aqui, saiba que está no caminho certo!<br />Continue estudando e você chegará lá...</div>
+            <div class="w-12 h-12 border border-[#D9D9D9] rounded flex justify-center items-center cursor-pointer hover:bg-white/10">
+                <img class="w-6 h-6" src="assets/images/ui/arrow-up-line.png" alt="" />
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="assets/js/header.js"></script>
+    <script type="text/javascript" src="assets/js/footer.js"></script>
+</body>
+
+</html>
