@@ -1,0 +1,1 @@
+# Refatora-o_de_C-digo_loja.
